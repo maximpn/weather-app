@@ -1,3 +1,7 @@
 <mat-toolbar color="primary">
   <span>Weather App</span>
 </mat-toolbar>
+
+<div *ngFor="let cityWeather of citiesWeather$ | async; trackBy: trackById">
+  {{ cityWeather | json }}
+</div>

@@ -5,10 +5,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { httpInterceptorProviders } from './http-interceptors';
+import { Cities } from './models/cities.enum';
 import { API_ACCESS_TOKEN } from './services/api-access-token';
 import { API_ENDPOINT } from './services/api-endpoint';
+import { MAIN_PAGE_CITY_IDS } from './services/main-page-city-ids';
 import { SharedModule } from './shared/shared.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   imports: [
@@ -16,7 +17,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     SharedModule,
-    BrowserAnimationsModule,
   ],
   declarations: [
     AppComponent,
@@ -35,6 +35,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         endpoint: 'http://api.openweathermap.org/data',
         version: '2.5',
       },
+    },
+    {
+      provide: MAIN_PAGE_CITY_IDS,
+      useValue: [
+        Cities.Amsterdam,
+        Cities.Moscow,
+        Cities.London,
+        Cities.Paris,
+        Cities.NewYorkCity,
+      ],
     },
     httpInterceptorProviders,
   ],
