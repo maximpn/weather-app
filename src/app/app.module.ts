@@ -43,7 +43,7 @@ import { SharedModule } from './shared/shared.module';
         Cities.Moscow,
         Cities.London,
         Cities.Paris,
-        Cities.NewYorkCity,
+        Cities.Madrid,
       ],
     },
     httpInterceptorProviders,
