@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { CurrentWeather } from '../../models/current-weather.model';
+import { CityWeather } from '../../models/city-weather.model';
 
 @Component({
   selector: 'wa-city-weather-card',
@@ -8,7 +8,7 @@ import { CurrentWeather } from '../../models/current-weather.model';
 })
 export class CityWeatherCardComponent {
   @Input()
-  weather!: CurrentWeather;
+  weather!: CityWeather;
 
   get weatherIconLink(): string {
     return `http://openweathermap.org/img/wn/${this.weather.weather[0].icon}.png`;
