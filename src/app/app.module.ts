@@ -7,15 +7,19 @@ import { AppComponent } from './app.component';
 import { httpInterceptorProviders } from './http-interceptors';
 import { API_ACCESS_TOKEN } from './services/api-access-token';
 import { API_ENDPOINT } from './services/api-endpoint';
+import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    SharedModule,
+    BrowserAnimationsModule,
+  ],
+  declarations: [
+    AppComponent,
   ],
   providers: [
     {
