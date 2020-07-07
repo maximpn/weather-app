@@ -2,7 +2,7 @@ import { Country } from './country.enum';
 import { GeoLocation } from './geo-location.model';
 import { WeatherCondition } from './weather-condition.model';
 
-export interface Weather {
+export interface CurrentWeather {
   coord: GeoLocation;
   weather: WeatherCondition[];
   base: string;

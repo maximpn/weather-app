@@ -1,10 +1,10 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 
-import { WeatherService } from './weather.service';
+import { CityWeatherService } from './weather.service';
 
-describe('WeatherService', () => {
-  let service: WeatherService;
+describe('CityWeatherService', () => {
+  let service: CityWeatherService;
   let httpTestingController: HttpTestingController;
 
   beforeEach(() => {
@@ -13,11 +13,11 @@ describe('WeatherService', () => {
         HttpClientTestingModule,
       ],
       providers: [
-        WeatherService,
+        CityWeatherService,
       ],
     });
 
-    service = TestBed.inject(WeatherService);
+    service = TestBed.inject(CityWeatherService);
     httpTestingController = TestBed.inject(HttpTestingController);
   });
 
@@ -25,14 +25,14 @@ describe('WeatherService', () => {
     httpTestingController.verify();
   });
 
-  it('should get weather by city id', fakeAsync(() => {
+  it('should get city-weather by city id', fakeAsync(() => {
     const cityId = 111;
     const expectedWeather = {};
     let actualWeather!: any;
 
     service.getWeatherByCityId(111).then(x => actualWeather = x);
 
-    const r = httpTestingController.expectOne('weather?id=111');
+    const r = httpTestingController.expectOne('city-weather?id=111');
     expect(r.request.method).toBe('GET');
 
     r.flush(expectedWeather);
@@ -42,7 +42,7 @@ describe('WeatherService', () => {
     expect(actualWeather).toBe(expectedWeather);
   }));
 
-  it('should get weather by city ids', fakeAsync(() => {
+  it('should get city-weather by city ids', fakeAsync(() => {
     const expectedWeather = {};
     let actualWeather!: any;
 

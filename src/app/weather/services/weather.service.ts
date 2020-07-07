@@ -3,16 +3,16 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
-import { Weather } from '../../models/weather.model';
+import { Weather } from '../models/weather.model';
 
 @Injectable({
   providedIn: 'root',
 })
-export class WeatherService {
+export class CityWeatherService {
   constructor(private readonly http: HttpClient) {}
 
   async getWeatherByCityId(id: number): Promise<Weather> {
-    const params = new HttpParams().set('id', id.toString());
+    const params = new HttpParams().set('id', id.toString()).set('units', 'metric');
 
     return this.http.get<Weather>('weather', { params }).toPromise();
   }
