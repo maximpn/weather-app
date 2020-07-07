@@ -3,7 +3,7 @@ import { fakeAsync, TestBed, tick } from '@angular/core/testing';
 
 import { CityWeatherService } from './weather.service';
 
-describe('CityWeatherService', () => {
+describe('WeatherService', () => {
   let service: CityWeatherService;
   let httpTestingController: HttpTestingController;
 
@@ -25,14 +25,14 @@ describe('CityWeatherService', () => {
     httpTestingController.verify();
   });
 
-  it('should get city-weather by city id', fakeAsync(() => {
+  it('should get weather by city id', fakeAsync(() => {
     const cityId = 111;
     const expectedWeather = {};
     let actualWeather!: any;
 
     service.getWeatherByCityId(111).then(x => actualWeather = x);
 
-    const r = httpTestingController.expectOne('city-weather?id=111');
+    const r = httpTestingController.expectOne('weather?id=111');
     expect(r.request.method).toBe('GET');
 
     r.flush(expectedWeather);
@@ -42,7 +42,7 @@ describe('CityWeatherService', () => {
     expect(actualWeather).toBe(expectedWeather);
   }));
 
-  it('should get city-weather by city ids', fakeAsync(() => {
+  it('should get weather by city ids', fakeAsync(() => {
     const expectedWeather = {};
     let actualWeather!: any;
 
