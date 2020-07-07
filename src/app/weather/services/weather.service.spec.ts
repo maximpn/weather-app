@@ -48,7 +48,7 @@ describe('WeatherService', () => {
 
     service.getWeatherByCityIds([111, 222, 333]).then(x => actualWeather = x);
 
-    const r = httpTestingController.expectOne('group?ids=111,222,333');
+    const r = httpTestingController.expectOne('group?id=111,222,333');
     expect(r.request.method).toBe('GET');
 
     r.flush(expectedWeather);
