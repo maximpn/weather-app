@@ -5,7 +5,6 @@ import { CurrentWeather } from '../../weather/models/current-weather.model';
 import { WeatherService } from '../../weather/services/weather.service';
 
 @Component({
-  selector: 'wa-homepage',
   templateUrl: 'homepage.component.html',
   styleUrls: ['homepage.component.scss'],
 })

@@ -1,4 +1,3 @@
-import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -16,10 +15,9 @@ import { WeatherModule } from './weather/weather.module';
 @NgModule({
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
     SharedModule,
     WeatherModule,
+    AppRoutingModule,
   ],
   declarations: [
     AppComponent,

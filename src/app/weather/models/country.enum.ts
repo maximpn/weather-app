@@ -1,4 +1,4 @@
-export enum Country {
+export enum CountryCode {
   Afghanistan = 'AF',
   AlandIslands = 'AX',
   Albania = 'AL',

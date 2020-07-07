@@ -5,6 +5,7 @@
 
 <div class="city-cards">
   <wa-city-weather-card *ngFor="let cityWeather of citiesWeather$ | async; trackBy: trackById"
-                        [weather]="cityWeather">
+                        [weather]="cityWeather"
+                        [routerLink]="['/', cityWeather.name, 'forecast']">
   </wa-city-weather-card>
 </div>
