@@ -1,28 +1,7 @@
-import { Component, Inject } from '@angular/core';
-
-import { MAIN_PAGE_CITY_IDS } from './services/main-page-city-ids';
-import { CurrentWeather } from './weather/models/current-weather.model';
-import { WeatherService } from './weather/services/weather.service';
-
-interface CityWeather {
-  cityId: number;
-  weatherPromise: Promise<CurrentWeather>;
-}
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'wa-root',
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
 })
-export class AppComponent {
-  citiesWeather$ = this.weatherService.getWeatherByCityIds(this.cityIds);
-
-  constructor(
-    @Inject(MAIN_PAGE_CITY_IDS) private readonly cityIds: number[],
-    private readonly weatherService: WeatherService,
-  ) {}
-
-  trackById(index: number, value: CurrentWeather): number {
-    return value.id;
-  }
-}
+export class AppComponent {}

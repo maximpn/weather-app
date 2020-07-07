@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 import { httpInterceptorProviders } from './http-interceptors';
 import { City } from './models/city.enum';
 import { API_ACCESS_TOKEN } from './services/api-access-token';
@@ -22,6 +23,7 @@ import { WeatherModule } from './weather/weather.module';
   ],
   declarations: [
     AppComponent,
+    HomepageComponent,
   ],
   providers: [
     {

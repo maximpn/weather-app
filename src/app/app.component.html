@@ -1,7 +1,5 @@
 <mat-toolbar color="primary">
-  <span>CityWeather App</span>
+  <span>WeatherApp</span>
 </mat-toolbar>
 
-<div *ngFor="let cityWeather of citiesWeather$ | async; trackBy: trackById">
-  <wa-city-weather-card [weather]="cityWeather"></wa-city-weather-card>
-</div>
+<wa-homepage></wa-homepage>
