@@ -1,0 +1,5 @@
+<wa-weather-condition-icon [weatherCondition]="weather.weather[0]"></wa-weather-condition-icon>
+
+<div mat-line>
+  <time>{{ weather.dt * 1000 | date:'MMM d, H:mm' }}</time>
+</div>

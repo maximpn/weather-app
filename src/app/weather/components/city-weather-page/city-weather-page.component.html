@@ -1,1 +1,3 @@
-{{ forecast | json }}
+<div class="hourly-forecast">
+  <wa-timestamp-weather *ngFor="let weather of forecast" [weather]="weather"></wa-timestamp-weather>
+</div>

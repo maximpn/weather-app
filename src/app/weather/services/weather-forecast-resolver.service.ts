@@ -4,7 +4,6 @@ import { EMPTY, Observable, of } from 'rxjs';
 import { mergeMap, switchMap, take } from 'rxjs/operators';
 
 import { TimestampWeather } from '../models/timestamp-weather.model';
-import { WeatherForecast } from '../models/weather-forecast.model';
 
 import { WeatherService } from './weather.service';
 

@@ -1,7 +1,7 @@
 <mat-card>
   <mat-card-header>
     <div mat-card-avatar>
-      <img [src]="weatherIconLink" [alt]="weatherDescription">
+      <wa-weather-condition-icon [weatherCondition]="weather.weather[0]"></wa-weather-condition-icon>
     </div>
     <mat-card-title>{{ weather.name }} {{ weather.main.temp | number:'1.0-0' }}°C</mat-card-title>
     <mat-card-subtitle>Wind: {{ weather.wind.speed }} km/h</mat-card-subtitle>
