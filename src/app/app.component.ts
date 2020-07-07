@@ -1,12 +1,12 @@
 import { Component, Inject } from '@angular/core';
 
-import { Weather } from './models/weather.model';
 import { MAIN_PAGE_CITY_IDS } from './services/main-page-city-ids';
+import { CurrentWeather } from './weather/models/current-weather.model';
 import { WeatherService } from './weather/services/weather.service';
 
 interface CityWeather {
   cityId: number;
-  weatherPromise: Promise<Weather>;
+  weatherPromise: Promise<CurrentWeather>;
 }
 
 @Component({
@@ -22,7 +22,7 @@ export class AppComponent {
     private readonly weatherService: WeatherService,
   ) {}
 
-  trackById(index: number, value: Weather): number {
+  trackById(index: number, value: CurrentWeather): number {
     return value.id;
   }
 }
