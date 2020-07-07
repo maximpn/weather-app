@@ -1,7 +1,7 @@
 import { Component, Inject } from '@angular/core';
 
 import { MAIN_PAGE_CITY_IDS } from '../../services/main-page-city-ids';
-import { CurrentWeather } from '../../weather/models/current-weather.model';
+import { CityWeather } from '../../weather/models/city-weather.model';
 import { WeatherService } from '../../weather/services/weather.service';
 
 @Component({
@@ -16,7 +16,7 @@ export class HomepageComponent {
     private readonly weatherService: WeatherService,
   ) {}
 
-  trackById(index: number, value: CurrentWeather): number {
+  trackById(index: number, value: CityWeather): number {
     return value.id;
   }
 }
