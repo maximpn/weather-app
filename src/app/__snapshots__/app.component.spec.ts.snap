@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <mat-toolbar
+    color="primary"
+  >
+    <span>
+      WeatherApp
+    </span>
+  </mat-toolbar>
+  <router-outlet />
+</div>
+`;

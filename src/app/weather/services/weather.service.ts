@@ -21,12 +21,6 @@ export class WeatherService {
     );
   }
 
-  getWeatherByCityId(id: number): Promise<CityWeather> {
-    const params = new HttpParams().set('id', id.toString()).set('units', 'metric');
-
-    return this.http.get<CityWeather>('weather', { params }).toPromise();
-  }
-
   getWeatherByCityIds(ids: number[]): Observable<CityWeather[]> {
     const params = new HttpParams().set('id', ids.join(',')).set('units', 'metric');
 
