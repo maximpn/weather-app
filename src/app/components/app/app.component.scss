@@ -5,10 +5,19 @@
 }
 
 ::ng-deep router-outlet + * {
+  margin-top: 64px;
   flex: 1;
 }
 
 .app-name {
   margin-left: 10px;
   cursor: pointer;
+}
+
+.mat-toolbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
 }
