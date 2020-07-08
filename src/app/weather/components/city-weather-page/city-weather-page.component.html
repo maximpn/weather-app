@@ -1,3 +1,7 @@
-<div class="hourly-forecast">
-  <wa-timestamp-weather *ngFor="let weather of forecast" [weather]="weather"></wa-timestamp-weather>
+<div class="hourly-forecast" role="list">
+  <ng-container *ngFor="let weather of forecast">
+    <wa-timestamp-weather [weather]="weather" role="listitem"></wa-timestamp-weather>
+    <mat-divider></mat-divider>
+  </ng-container>
+
 </div>

@@ -1,5 +1,14 @@
-<wa-weather-condition-icon [weatherCondition]="weather.weather[0]"></wa-weather-condition-icon>
+<div class="date-time-wrapper">
+  <time class="time">{{ weather.dt * 1000 | date:'H:mm' }}</time>
+  <time class="date">{{ weather.dt * 1000 | date:'MMM d' }}</time>
+</div>
 
-<div mat-line>
-  <time>{{ weather.dt * 1000 | date:'MMM d, H:mm' }}</time>
+<wa-weather-condition-icon [weatherCondition]="weather.weather[0]" size="2x"></wa-weather-condition-icon>
+
+<span class="temperature">{{ weather.temp | number:'1.0-0' }}°</span>
+<span class="real-feel">Feels like: {{ weather.feels_like | number:'1.0-0' }}°</span>
+<span class="phrase">{{ weather.weather[0].description }}</span>
+<div class="clouds">
+  <mat-icon>cloud_queue</mat-icon>
+  <span class="value">{{ weather.clouds }}%</span>
 </div>
