@@ -15,6 +15,8 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
   >
     
     
+    
+    
     <wa-timestamp-weather
       role="listitem"
     >
@@ -41,6 +43,7 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
 }
     </wa-timestamp-weather>
     <mat-divider />
+    
   </div>
 </div>
 `;

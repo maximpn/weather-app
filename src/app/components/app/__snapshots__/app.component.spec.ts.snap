@@ -5,6 +5,7 @@ exports[`AppComponent should render the component 1`] = `
   id="root0"
 >
   <mat-toolbar
+    class="mat-elevation-z6"
     color="primary"
   >
     <mat-icon>

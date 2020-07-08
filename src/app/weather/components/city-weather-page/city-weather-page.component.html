@@ -3,8 +3,10 @@
 </wa-page-header>
 
 <div class="hourly-forecast" role="list">
-  <ng-container *ngFor="let weather of forecast">
-    <wa-timestamp-weather [weather]="weather" role="listitem"></wa-timestamp-weather>
-    <mat-divider></mat-divider>
+  <ng-container *waErrorGuard="forecast; data as data">
+    <ng-container *ngFor="let weather of forecast">
+      <wa-timestamp-weather [weather]="weather" role="listitem"></wa-timestamp-weather>
+      <mat-divider></mat-divider>
+    </ng-container>
   </ng-container>
 </div>

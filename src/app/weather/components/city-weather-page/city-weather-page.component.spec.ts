@@ -2,6 +2,7 @@ import { Component, Input, NO_ERRORS_SCHEMA } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 
+import { ErrorGuardDirective } from '../../../shared/directives/error-guard/error-guard.directive';
 import { TimestampWeather } from '../../models/timestamp-weather.model';
 
 import { CityWeatherPageComponent } from './city-weather-page.component';
@@ -38,6 +39,7 @@ describe('CityWeatherPageComponent', () => {
       declarations: [
         CityWeatherPageComponent,
         TimestampWeatherMockComponent,
+        ErrorGuardDirective,
       ],
       providers: [
         { provide: ActivatedRoute, useValue: activatedRouteMock },
