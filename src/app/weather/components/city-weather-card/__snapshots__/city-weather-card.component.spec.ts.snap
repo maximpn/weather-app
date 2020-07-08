@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CityWeatherCardComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <mat-card>
+    <mat-card-header>
+      <div
+        mat-card-avatar=""
+      >
+        <wa-weather-condition-icon>
+          {
+  "id": 1,
+  "main": "cloudy",
+  "description": "cloudy",
+  "icon": "02d"
+}
+        </wa-weather-condition-icon>
+      </div>
+      <mat-card-title>
+        City 31°C
+      </mat-card-title>
+      <mat-card-subtitle>
+        Wind: 5.5 m/s
+      </mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+</div>
+`;

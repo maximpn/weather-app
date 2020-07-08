@@ -7,7 +7,14 @@ exports[`AppComponent should render the component 1`] = `
   <mat-toolbar
     color="primary"
   >
-    <span>
+    <mat-icon>
+      wb_sunny
+    </mat-icon>
+    <span
+      class="app-name"
+      routerlink="/"
+      tabindex="0"
+    >
       WeatherApp
     </span>
   </mat-toolbar>

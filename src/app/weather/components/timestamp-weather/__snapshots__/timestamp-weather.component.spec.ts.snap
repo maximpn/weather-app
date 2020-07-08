@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimestampWeatherComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <div
+    class="date-time-wrapper"
+  >
+    <time
+      class="time"
+    >
+      0:00
+    </time>
+    <time
+      class="date"
+    >
+      Jun 2
+    </time>
+  </div>
+  <wa-weather-condition-icon
+    size="2x"
+  >
+    {
+  "id": 1,
+  "main": "cloudy",
+  "description": "cloudy",
+  "icon": "02d"
+}
+  </wa-weather-condition-icon>
+  <span
+    class="temperature"
+  >
+    31°
+  </span>
+  <span
+    class="real-feel"
+  >
+    Feels like: 31°
+  </span>
+  <span
+    class="phrase"
+  >
+    cloudy
+  </span>
+  <div
+    class="clouds"
+  >
+    <mat-icon>
+      cloud_queue
+    </mat-icon>
+    <span
+      class="value"
+    >
+      20%
+    </span>
+  </div>
+</div>
+`;

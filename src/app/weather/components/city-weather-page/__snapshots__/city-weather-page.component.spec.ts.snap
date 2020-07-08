@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CityWeatherPageComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <wa-page-header>
+    <h1>
+      Hourly weather forecast in City1
+    </h1>
+  </wa-page-header>
+  <div
+    class="hourly-forecast"
+    role="list"
+  >
+    
+    
+    <wa-timestamp-weather
+      role="listitem"
+    >
+      {
+  "temp": 20
+}
+    </wa-timestamp-weather>
+    <mat-divider />
+    
+    <wa-timestamp-weather
+      role="listitem"
+    >
+      {
+  "temp": 21
+}
+    </wa-timestamp-weather>
+    <mat-divider />
+    
+    <wa-timestamp-weather
+      role="listitem"
+    >
+      {
+  "temp": 22
+}
+    </wa-timestamp-weather>
+    <mat-divider />
+  </div>
+</div>
+`;

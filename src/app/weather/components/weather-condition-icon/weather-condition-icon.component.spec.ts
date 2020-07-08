@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WeatherCondition } from '../../models/weather-condition.model';
 
@@ -7,13 +7,13 @@ import { WeatherConditionIconComponent } from './weather-condition-icon.componen
 describe('AppComponent', () => {
   let fixture: ComponentFixture<WeatherConditionIconComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(() => {
     fixture = TestBed.configureTestingModule({
       declarations: [
         WeatherConditionIconComponent,
       ],
     }).createComponent(WeatherConditionIconComponent);
-  }));
+  });
 
   it('should render the component', () => {
     expect(fixture.nativeElement).toMatchSnapshot();

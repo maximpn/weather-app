@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomepageComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <wa-page-header>
+    <h1
+      class="main-header"
+    >
+      Weather App
+    </h1>
+    <h2
+      class="sub-header"
+    >
+      Shows weather in five European cities
+    </h2>
+  </wa-page-header>
+  <div
+    class="city-cards"
+  >
+    
+    <wa-city-weather-card />
+    <wa-city-weather-card />
+    <wa-city-weather-card />
+  </div>
+</div>
+`;

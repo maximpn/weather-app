@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHeaderComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <wa-page-header>
+    <header>
+      <h1>
+        Some header
+      </h1>
+    </header>
+  </wa-page-header>
+</div>
+`;
