@@ -28,9 +28,9 @@ export class WeatherForecastResolverService implements Resolve<TimestampWeather[
     return this.weatherService.getCityGeoLocation(name).pipe(
       switchMap(location => this.weatherService.getHourlyWeatherForecastByLocation(location.lat, location.lon)),
       take(1),
-      mergeMap(crisis => {
-        if (crisis) {
-          return of(crisis);
+      mergeMap(forecast => {
+        if (forecast) {
+          return of(forecast);
         } else {
           this.goToHomePage();
 
