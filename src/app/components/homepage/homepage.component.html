@@ -1,7 +1,7 @@
-<header>
-  <h1 class="mat-h1">Weather App</h1>
-  <h2>Shows weather in five European cities</h2>
-</header>
+<wa-page-header>
+  <h1 class="main-header">Weather App</h1>
+  <h2 class="sub-header">Shows weather in five European cities</h2>
+</wa-page-header>
 
 <div class="city-cards">
   <wa-city-weather-card *ngFor="let cityWeather of citiesWeather$ | async; trackBy: trackById"

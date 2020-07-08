@@ -11,4 +11,8 @@ export class CityWeatherPageComponent {
   forecast: TimestampWeather[] = this.route.snapshot.data.forecast;
 
   constructor(private readonly route: ActivatedRoute) {}
+
+  get cityName(): string {
+    return this.route.snapshot.params.name;
+  }
 }
