@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppComponent should render the component 1`] = `
+<div
+  id="root0"
+>
+  <img />
+</div>
+`;
+
+exports[`AppComponent should render the component when the weather condition and size are set 1`] = `
+<div
+  id="root2"
+>
+  <img
+    alt="few clouds"
+    src="http://openweathermap.org/img/wn/02d@4x.png"
+  />
+</div>
+`;
+
+exports[`AppComponent should render the component when the weather condition is set 1`] = `
+<div
+  id="root1"
+>
+  <img
+    alt="few clouds"
+    src="http://openweathermap.org/img/wn/02d.png"
+  />
+</div>
+`;

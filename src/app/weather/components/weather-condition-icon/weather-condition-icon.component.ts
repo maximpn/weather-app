@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { WeatherCondition } from '../../../weather/models/weather-condition.model';
+import { WeatherCondition } from '../../models/weather-condition.model';
 
 @Component({
   selector: 'wa-weather-condition-icon',
@@ -10,8 +10,17 @@ export class WeatherConditionIconComponent {
   @Input()
   weatherCondition!: WeatherCondition;
 
+  @Input()
+  size: '2x' | '4x' | undefined;
+
   get weatherIconLink(): string {
-    return `http://openweathermap.org/img/wn/${this.weatherCondition.icon}.png`;
+    const icon = [this.weatherCondition.icon];
+
+    if (this.size) {
+      icon.push(this.size);
+    }
+
+    return `http://openweathermap.org/img/wn/${icon.join('@')}.png`;
   }
 
   get weatherDescription(): string {
