@@ -4,8 +4,10 @@
 </wa-page-header>
 
 <div class="city-cards">
-  <wa-city-weather-card *ngFor="let cityWeather of citiesWeather$ | async; trackBy: trackById"
-                        [weather]="cityWeather"
-                        [routerLink]="['/', cityWeather.name, 'forecast']">
-  </wa-city-weather-card>
+  <ng-container *waErrorGuard="citiesWeather$ | async; data as citiesWeather">
+    <wa-city-weather-card *ngFor="let cityWeather of citiesWeather; trackBy: trackById"
+                          [weather]="cityWeather"
+                          [routerLink]="['/', cityWeather.name, 'forecast']">
+    </wa-city-weather-card>
+  </ng-container>
 </div>

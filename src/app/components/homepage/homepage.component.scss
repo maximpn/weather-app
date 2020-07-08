@@ -1,3 +1,8 @@
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
 .main-header {
   font-size: 56px;
   font-weight: 300;
@@ -13,10 +18,11 @@
 }
 
 .city-cards {
-  margin-top: 30px;
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-content: center;
 
   wa-city-weather-card {
     flex: 1;

@@ -20,9 +20,12 @@ exports[`HomepageComponent should render the component 1`] = `
     class="city-cards"
   >
     
+    
+    
     <wa-city-weather-card />
     <wa-city-weather-card />
     <wa-city-weather-card />
+    
   </div>
 </div>
 `;

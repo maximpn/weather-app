@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ErrorGuardDirective should render the component 1`] = `
+<div
+  id="root0"
+>
+  
+  <div>
+    Data without error
+  </div>
+</div>
+`;
+
+exports[`ErrorGuardDirective should render the component with the fallback error message 1`] = `
+<div
+  id="root1"
+>
+  
+  <wa-error-message>
+    Some error
+
+  </wa-error-message>
+</div>
+`;

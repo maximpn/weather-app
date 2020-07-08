@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PageHeaderComponent should render the component 1`] = `
+exports[`ErrorGuardComponent should render the component 1`] = `
 <div
   id="root0"
 >

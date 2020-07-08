@@ -8,7 +8,7 @@ import { PageHeaderComponent } from './page-header.component';
 })
 class WrapperComponent {}
 
-describe('PageHeaderComponent', () => {
+describe('ErrorGuardComponent', () => {
   let fixture: ComponentFixture<WrapperComponent>;
 
   beforeEach(() => {

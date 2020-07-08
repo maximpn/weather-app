@@ -4,6 +4,7 @@ import { By } from '@angular/platform-browser';
 import { of } from 'rxjs';
 
 import { MAIN_PAGE_CITY_IDS } from '../../services/main-page-city-ids';
+import { ErrorGuardDirective } from '../../shared/directives/error-guard/error-guard.directive';
 import { WeatherService } from '../../weather/services/weather.service';
 
 import { HomepageComponent } from './homepage.component';
@@ -44,6 +45,7 @@ describe('HomepageComponent', () => {
         HomepageComponent,
         RouterLinkMockDirective,
         CityWeatherCardMockComponent,
+        ErrorGuardDirective,
       ],
       providers: [
         { provide: MAIN_PAGE_CITY_IDS, useValue: cityIds },
