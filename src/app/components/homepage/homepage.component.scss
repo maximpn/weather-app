@@ -1,3 +1,5 @@
+@import 'variables';
+
 :host {
   display: flex;
   flex-direction: column;
@@ -33,12 +35,12 @@ wa-city-weather-card {
   box-sizing: border-box;
   cursor: pointer;
 
-  @media (max-width: 1024px) {
+  @media (max-width: $screen-md) {
     min-width: 50%;
     max-width: 50%;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: $screen-sm) {
     min-width: 100%;
     max-width: 100%;
   }

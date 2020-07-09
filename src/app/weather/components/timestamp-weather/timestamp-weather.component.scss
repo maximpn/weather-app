@@ -1,12 +1,26 @@
+@import 'variables';
+
 :host {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-areas: 'datetime icon temperature real-feel phrase clouds';
   align-items: center;
+  justify-items: center;
   padding: 0 20px;
+
+  @media (max-width: $screen-sm) {
+    grid-template-areas: 'datetime icon temperature'
+                         'real-feel phrase clouds';
+
+    .date-time-wrapper,
+    .phrase {
+      width: auto;
+    }
+  }
 }
 
 .date-time-wrapper {
   width: 80px;
+  grid-area: datetime;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -20,21 +34,29 @@
   }
 }
 
+wa-weather-condition-icon {
+  grid-area: icon;
+}
+
 .temperature {
+  grid-area: temperature;
   font-size: 48px;
 }
 
 .real-feel {
+  grid-area: real-feel;
   color: #878787;
 }
 
 .phrase {
   width: 200px;
+  grid-area: phrase;
   text-align: center;
   text-transform: capitalize;
 }
 
 .clouds {
+  grid-area: clouds;
   display: flex;
 
   .value {
