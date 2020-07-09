@@ -2,6 +2,10 @@
 
 Angular 10 based web application which displays weather in 5 European cities.
 
+## Live demo
+
+The live demo can be found [here](https://weather-app-ochre.vercel.app).
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
