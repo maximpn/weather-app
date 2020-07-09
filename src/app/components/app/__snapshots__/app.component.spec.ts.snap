@@ -17,6 +17,17 @@ exports[`AppComponent should render the component 1`] = `
     >
       WeatherApp
     </span>
+    <a
+      class="example-icon"
+      href="https://github.com/mpalenov/weather-app"
+      mat-button=""
+      target="_blank"
+    >
+      <mat-icon
+        svgicon="github"
+      />
+        GitHub 
+    </a>
   </mat-toolbar>
   
   <router-outlet />
@@ -40,6 +51,17 @@ exports[`AppComponent should render the component with the loader 1`] = `
     >
       WeatherApp
     </span>
+    <a
+      class="example-icon"
+      href="https://github.com/mpalenov/weather-app"
+      mat-button=""
+      target="_blank"
+    >
+      <mat-icon
+        svgicon="github"
+      />
+        GitHub 
+    </a>
   </mat-toolbar>
   
   <mat-progress-bar

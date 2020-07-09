@@ -20,6 +20,15 @@
   cursor: pointer;
 }
 
+.mat-toolbar .mat-button {
+  margin-left: auto;
+
+  .mat-icon {
+    height: 26px;
+    width: 26px;
+  }
+}
+
 .mat-toolbar,
 .mat-progress-bar {
   position: fixed;

@@ -1,6 +1,9 @@
 <mat-toolbar color="primary" class="mat-elevation-z6">
   <mat-icon>wb_sunny</mat-icon>
   <span routerLink="/" class="app-name">WeatherApp</span>
+  <a href="https://github.com/mpalenov/weather-app" target="_blank" mat-button class="example-icon">
+    <mat-icon svgIcon="github"></mat-icon>&nbsp;&nbsp;GitHub
+  </a>
 </mat-toolbar>
 <mat-progress-bar *ngIf="loading$ | async" color="accent" mode="indeterminate"></mat-progress-bar>
 
