@@ -1,7 +1,7 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { catchError, pluck } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+import { pluck } from 'rxjs/operators';
 
 import { CityWeather } from '../models/city-weather.model';
 import { GeoLocation } from '../models/geo-location.model';
@@ -19,7 +19,6 @@ export class WeatherService {
 
     return this.http.get<CityWeather>('weather', { params }).pipe(
       pluck('coord'),
-      catchError((e, _) => of(e)),
     );
   }
 
@@ -28,7 +27,6 @@ export class WeatherService {
 
     return this.http.get<{ list: CityWeather[] }>('group', { params }).pipe(
       pluck('list'),
-      catchError((e, _) => of(e)),
     );
   }
 
@@ -40,7 +38,6 @@ export class WeatherService {
 
     return this.http.get<{ hourly: TimestampWeather[] }>('onecall', { params }).pipe(
       pluck('hourly'),
-      catchError((e, _) => of(e)),
     );
   }
 

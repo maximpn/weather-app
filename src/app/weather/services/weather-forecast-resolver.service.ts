@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, Router, RouterStateSnapshot } from '@angular/router';
 import { EMPTY, Observable, of } from 'rxjs';
-import { mergeMap, switchMap, take } from 'rxjs/operators';
+import { catchError, first, switchMap } from 'rxjs/operators';
 
 import { TimestampWeather } from '../models/timestamp-weather.model';
 
@@ -10,13 +10,13 @@ import { WeatherService } from './weather.service';
 @Injectable({
   providedIn: 'root',
 })
-export class WeatherForecastResolverService implements Resolve<TimestampWeather[]> {
+export class WeatherForecastResolverService implements Resolve<TimestampWeather[] | Error> {
   constructor(
     private readonly weatherService: WeatherService,
     private readonly router: Router,
   ) {}
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TimestampWeather[]> | Observable<never> {
+  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<TimestampWeather[] | Error> | Observable<never> {
     const name = route.paramMap.get('name');
 
     if (!name) {
@@ -26,17 +26,9 @@ export class WeatherForecastResolverService implements Resolve<TimestampWeather[
     }
 
     return this.weatherService.getCityGeoLocation(name).pipe(
+      first(),
       switchMap(location => this.weatherService.getHourlyWeatherForecastByLocation(location.lat, location.lon)),
-      take(1),
-      mergeMap(forecast => {
-        if (forecast) {
-          return of(forecast);
-        } else {
-          this.goToHomePage();
-
-          return EMPTY;
-        }
-      }),
+      catchError((e, _) => of(e)),
     );
   }
 

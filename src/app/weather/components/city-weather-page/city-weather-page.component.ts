@@ -8,7 +8,7 @@ import { TimestampWeather } from '../../models/timestamp-weather.model';
   styleUrls: ['city-weather-page.component.scss'],
 })
 export class CityWeatherPageComponent {
-  forecast: TimestampWeather[] = this.route.snapshot.data.forecast;
+  forecast: TimestampWeather[] | Error = this.route.snapshot.data.forecast;
 
   constructor(private readonly route: ActivatedRoute) {}
 

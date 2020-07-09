@@ -28,10 +28,11 @@ describe('WeatherService', () => {
   describe('getCityGeoLocation', () => {
     const expectedGeoLocation = {};
     let actualGeoLocation!: any;
+    let actualError!: Error;
     let r: TestRequest;
 
     beforeEach(() => {
-      service.getCityGeoLocation('City name').subscribe(x => actualGeoLocation = x);
+      service.getCityGeoLocation('City name').subscribe(x => actualGeoLocation = x, e => actualError = e.error);
 
       r = httpTestingController.expectOne('weather?units=metric&q=City%20name');
     });
@@ -47,17 +48,18 @@ describe('WeatherService', () => {
     it('should return an error', () => {
       r.error(new ErrorEvent('some-type', { message: 'Some error' }));
 
-      expect(actualGeoLocation.error.message).toBe('Some error');
+      expect(actualError.message).toBe('Some error');
     });
   });
 
   describe('getWeatherByCityIds', () => {
     const expectedWeather = {};
     let actualWeather!: any;
+    let actualError!: Error;
     let r: TestRequest;
 
     beforeEach(() => {
-      service.getWeatherByCityIds([111, 222, 333]).subscribe(x => actualWeather = x);
+      service.getWeatherByCityIds([111, 222, 333]).subscribe(x => actualWeather = x, e => actualError = e.error);
       r = httpTestingController.expectOne('group?id=111,222,333&units=metric');
     });
 
@@ -72,17 +74,18 @@ describe('WeatherService', () => {
     it('should return an error', () => {
       r.error(new ErrorEvent('some-type', { message: 'Some error' }));
 
-      expect(actualWeather.error.message).toBe('Some error');
+      expect(actualError.message).toBe('Some error');
     });
   });
 
   describe('getHourlyWeatherForecastByLocation', () => {
     const expectedWeather = {};
     let actualWeather!: any;
+    let actualError!: Error;
     let r: TestRequest;
 
     beforeEach(() => {
-      service.getHourlyWeatherForecastByLocation(10, 10).subscribe(x => actualWeather = x);
+      service.getHourlyWeatherForecastByLocation(10, 10).subscribe(x => actualWeather = x, e => actualError = e.error);
       r = httpTestingController.expectOne('onecall?units=metric&lat=10&lon=10&exclude=current,minutely,daily');
     });
 
@@ -97,7 +100,7 @@ describe('WeatherService', () => {
     it('should return an error', () => {
       r.error(new ErrorEvent('some-type', { message: 'Some error' }));
 
-      expect(actualWeather.error.message).toBe('Some error');
+      expect(actualError.message).toBe('Some error');
     });
   });
 });
