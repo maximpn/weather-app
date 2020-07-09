@@ -7,7 +7,8 @@
   <ng-container *waErrorGuard="citiesWeather$ | async; data as citiesWeather">
     <wa-city-weather-card *ngFor="let cityWeather of citiesWeather; trackBy: trackById"
                           [weather]="cityWeather"
-                          [routerLink]="['/', cityWeather.name, 'forecast']">
+                          [routerLink]="['/', cityWeather.name, 'forecast']"
+                          class="qa-city-weather-card">
     </wa-city-weather-card>
   </ng-container>
 </div>
