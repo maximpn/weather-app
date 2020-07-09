@@ -1,11 +1,11 @@
 <wa-page-header>
-  <h1>Hourly weather forecast in {{ cityName }}</h1>
+  <h1>Hourly weather forecast for {{ cityName }}</h1>
 </wa-page-header>
 
 <div class="hourly-forecast" role="list">
   <ng-container *waErrorGuard="forecast; data as data">
     <ng-container *ngFor="let weather of forecast">
-      <wa-timestamp-weather [weather]="weather" role="listitem"></wa-timestamp-weather>
+      <wa-timestamp-weather [weather]="weather" role="listitem" class="qa-hour-forecast"></wa-timestamp-weather>
       <mat-divider></mat-divider>
     </ng-container>
   </ng-container>

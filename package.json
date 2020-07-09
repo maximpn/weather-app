@@ -11,7 +11,7 @@
     "test:once": "ng test",
     "lint": "ng lint",
     "e2e:start-server": "npm run build:prod && angular-http-server --path ./dist/weather-app -p 4200",
-    "e2e": "start-server-and-test e2e:start-server http://localhost:4200 'ng e2e --watch'"
+    "e2e": "start-server-and-test e2e:start-server http://localhost:4200 'ng e2e'"
   },
   "private": false,
   "repository": {
