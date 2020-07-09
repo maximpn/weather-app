@@ -34,7 +34,7 @@ import { WeatherModule } from './weather/weather.module';
     {
       provide: API_ENDPOINT,
       useValue: {
-        endpoint: 'http://api.openweathermap.org/data',
+        endpoint: 'https://api.openweathermap.org/data',
         version: '2.5',
       },
     },
