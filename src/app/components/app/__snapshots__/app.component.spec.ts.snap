@@ -14,11 +14,38 @@ exports[`AppComponent should render the component 1`] = `
     <span
       class="app-name"
       routerlink="/"
-      tabindex="0"
     >
       WeatherApp
     </span>
   </mat-toolbar>
+  
+  <router-outlet />
+</div>
+`;
+
+exports[`AppComponent should render the component with the loader 1`] = `
+<div
+  id="root1"
+>
+  <mat-toolbar
+    class="mat-elevation-z6"
+    color="primary"
+  >
+    <mat-icon>
+      wb_sunny
+    </mat-icon>
+    <span
+      class="app-name"
+      routerlink="/"
+    >
+      WeatherApp
+    </span>
+  </mat-toolbar>
+  
+  <mat-progress-bar
+    color="accent"
+    mode="indeterminate"
+  />
   <router-outlet />
 </div>
 `;

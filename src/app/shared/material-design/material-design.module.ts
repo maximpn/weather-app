@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
@@ -12,6 +13,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatIconModule,
     MatDividerModule,
     MatSnackBarModule,
+    MatProgressBarModule,
   ],
 })
 export class MaterialDesignModule {}

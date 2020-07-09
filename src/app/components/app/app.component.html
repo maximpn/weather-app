@@ -2,5 +2,6 @@
   <mat-icon>wb_sunny</mat-icon>
   <span routerLink="/" class="app-name">WeatherApp</span>
 </mat-toolbar>
+<mat-progress-bar *ngIf="loading$ | async" color="accent" mode="indeterminate"></mat-progress-bar>
 
 <router-outlet></router-outlet>
