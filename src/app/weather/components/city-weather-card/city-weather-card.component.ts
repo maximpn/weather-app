@@ -5,6 +5,7 @@ import { CityWeather } from '../../models/city-weather.model';
 @Component({
   selector: 'wa-city-weather-card',
   templateUrl: 'city-weather-card.component.html',
+  styleUrls: ['city-weather-card.component.scss'],
 })
 export class CityWeatherCardComponent {
   @Input()
