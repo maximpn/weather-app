@@ -108,6 +108,13 @@
               "**/node_modules/**"
             ]
           }
+        },
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "cypress.json",
+            "tsConfig": "tsconfig.e2e.json"
+          }
         }
       }
     }

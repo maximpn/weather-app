@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "sourceMap": false,
+    "outDir": "../../dist/out-tsc",
+    "types": [
+      "cypress",
+      "node"
+    ]
+  },
+  "include": [
+    "e2e/**/*.ts"
+  ]
+}
