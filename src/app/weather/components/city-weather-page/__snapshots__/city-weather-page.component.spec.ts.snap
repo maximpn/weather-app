@@ -6,7 +6,7 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
 >
   <wa-page-header>
     <h1>
-      Hourly weather forecast in City1
+      Hourly weather forecast for City1
     </h1>
   </wa-page-header>
   <div
@@ -18,6 +18,7 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
     
     
     <wa-timestamp-weather
+      class="qa-hour-forecast"
       role="listitem"
     >
       {
@@ -27,6 +28,7 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
     <mat-divider />
     
     <wa-timestamp-weather
+      class="qa-hour-forecast"
       role="listitem"
     >
       {
@@ -36,6 +38,7 @@ exports[`CityWeatherPageComponent should render the component 1`] = `
     <mat-divider />
     
     <wa-timestamp-weather
+      class="qa-hour-forecast"
       role="listitem"
     >
       {

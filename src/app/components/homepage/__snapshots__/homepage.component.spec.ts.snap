@@ -22,9 +22,15 @@ exports[`HomepageComponent should render the component 1`] = `
     
     
     
-    <wa-city-weather-card />
-    <wa-city-weather-card />
-    <wa-city-weather-card />
+    <wa-city-weather-card
+      class="qa-city-weather-card"
+    />
+    <wa-city-weather-card
+      class="qa-city-weather-card"
+    />
+    <wa-city-weather-card
+      class="qa-city-weather-card"
+    />
     
   </div>
 </div>
